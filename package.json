@@ -2,11 +2,11 @@
   "name": "7697016-front-end.1",
   "version": "1.0.0",
   "description": "Support de Code pour le cours OpenClassrooms Creez des pages web dynamiques avec javascript",
-  "main": "pieces.js",
+  "main": "src/pieces.js",
   "scripts": {
     "start": "http-server",
     "dev": "http-server",
-    "build": "webpack --mode=none"
+    "build": "webpack --mode=development"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "bcryptjs": "^2.4.3",
     "crypto": "^1.0.1",
     "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.1",
     "http-server": "^14.1.1",
     "jwt-decode": "^3.1.2"
   },
