@@ -152,7 +152,11 @@ supprimer.forEach(function(button) {
         // }, 1000);
 
                 // Recharger automatiquement la page
-                location.reload();
+                // location.reload();
+
+            // Faire disparaître l'article de l'affichage
+            var article = button.parentElement.parentElement;
+            article.remove();
     });
 });
 
