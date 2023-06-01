@@ -1,9 +1,9 @@
 let articles = window.localStorage.getItem("articles");
 if (articles === null) {
     // Récupération des pièces depuis l'API HTTP'
-    const reponse = await fetch("http://localhost:8000/article/", {
+    const reponse = await fetch("http://kpopnation-backend.cluster-ig3.igpolytech.fr/article/", {
         headers: {
-            'Acces-Control-Allow-Origin': 'http://127.0.0.1:8080/', //autoriser le domaine d'origine
+            'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
         }
     });
     // Récupération des pièces depuis le fichier JSON
@@ -24,7 +24,7 @@ else {
 let artistes = window.localStorage.getItem("artistes");
 if (artistes === null) {
     // Récupération des pièces depuis l'API HTTP'
-    const reponse = await fetch("http://localhost:8000/artiste/");
+    const reponse = await fetch("http://kpopnation-backend.cluster-ig3.igpolytech.fr/artiste/");
     // Récupération des pièces depuis le fichier JSON
     // const reponse = await fetch('artistes.json');
     let artistes = await reponse.json();

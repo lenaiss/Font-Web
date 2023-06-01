@@ -2,9 +2,9 @@
 let articles = window.localStorage.getItem("articles");
 if (articles === null) {
     // Récupération des pièces depuis l'API HTTP'
-    const reponse = await fetch("http://localhost:8000/article/", {
+    const reponse = await fetch("http://kpopnation-backend.cluster-ig3.igpolytech.fr/article/", {
         headers: {
-            'Acces-Control-Allow-Origin': 'http://127.0.0.1:8080/', //autoriser le domaine d'origine
+            'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
         }
     });
     // Récupération des pièces depuis le fichier JSON
@@ -25,7 +25,7 @@ else {
 let artistes = window.localStorage.getItem("artistes");
 if (artistes === null) {
     // Récupération des pièces depuis l'API HTTP'
-    const reponse = await fetch("http://localhost:8000/artiste/");
+    const reponse = await fetch("http://kpopnation-backend.cluster-ig3.igpolytech.fr/artiste/");
     // Récupération des pièces depuis le fichier JSON
     // const reponse = await fetch('artistes.json');
     let artistes = await reponse.json();
@@ -390,63 +390,7 @@ filtrerSeasonsGreet.addEventListener("click", function () {
     console.log(piecesFiltrees); // Vérifiez si les articles sont correctement filtrés
     // Effacement de l'écran et regénération de la page
     document.querySelector(".filtres label").innerHTML = "De 0 à 90";
-    document.querySelector(".titre h1").innerHTML = "Season's Greetings";
+    document.querySelector(".titre h1").innerHTML = "Season s Greetings";
     document.querySelector(".fiches").innerHTML = "";
     genererPieces(piecesFiltrees);
 });
-
-
-
-
-// TEST TEST TEST
-
-
-
-
-// const filtrerGroupes = document.querySelector(".btn-groupes");
-// filtrerGroupes.addEventListener("click", function () {
-//     // localStorage.setItem("filtreSelectionne", "Groupe");
-//     // let filtreSelectionne = localStorage.getItem("filtreSelectionne");
-//     fitrageGroupe();
-// });
-
-// function fitrageGroupe() {
-//     const piecesFiltrees = articles.filter(function (article) {
-//         let id = article.idArtiste;
-//         return artistes[id-1].categorie == "Groupe";
-//     });
-//     console.log(piecesFiltrees); // Vérifiez si les articles sont correctement filtrés
-//     // Effacement de l'écran et regénération de la page
-//     document.querySelector(".filtres label").innerHTML = "De 0 à 90";
-//     document.querySelector(".titre h1").innerHTML = "Groupes";
-//     document.querySelector(".fiches").innerHTML = "";
-//     genererPieces(piecesFiltrees);
-// }
-
-
-
-
-
-
-// document.querySelector(".btn-groupes").addEventListener("click", function () {
-//     sessionStorage.setItem("executeFunction", "true");
-//     window.location.href = "index.html";
-// });
-// const filtrerGroupes = document.querySelector(".btn-groupes");
-// filtrerGroupes.addEventListener("click", function () {
-//     if (sessionStorage.getItem("executeFunction") === "true") {
-//       const piecesFiltrees = articles.filter(function (article) {
-//         let id = article.idArtiste;
-//         return artistes[id-1].categorie == "Groupe";
-//       });
-//       console.log(piecesFiltrees); // Vérifiez si les articles sont correctement filtrés
-//       // Effacement de l'écran et regénération de la page
-//       document.querySelector(".filtres label").innerHTML = "De 0 à 90";
-//       document.querySelector(".titre h1").innerHTML = "Groupes";
-//       document.querySelector(".fiches").innerHTML = "";
-//       genererPieces(piecesFiltrees);
-  
-//       // Réinitialiser la valeur de la clé "executeFunction" à "false" pour éviter que la fonction ne soit exécutée à nouveau lors du chargement de la page suivante
-//       sessionStorage.setItem("executeFunction", "false");
-//     }
-// });

@@ -4,7 +4,7 @@
 //     // Récupération des pièces depuis l'API HTTP'
 //     const reponse = await fetch("http://localhost:8000/user/", {
 //         headers: {
-//             'Acces-Control-Allow-Origin': 'http://127.0.0.1:8080/', //autoriser le domaine d'origine
+//             'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
 //         }
 //     });
 //     // Récupération des pièces depuis le fichier JSON
@@ -41,10 +41,10 @@ signIn.addEventListener("click", async function () {
 
   try {
     // Effectuer une requête POST vers le backend
-    const response1 = await fetch('http://localhost:8000/user/register', {
+    const response1 = await fetch('http://kpopnation-backend.cluster-ig3.igpolytech.fr/user/register', {
       method: 'POST',
       headers: {
-        'Acces-Control-Allow-Origin': 'http://127.0.0.1:8080/', //autoriser le domaine d'origine
+        'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(user)
@@ -64,7 +64,8 @@ signIn.addEventListener("click", async function () {
       // Attendre 3 secondes (3000 millisecondes)
       setTimeout(function() {
       // Rediriger l'utilisateur vers une autre page après 3 secondes
-        window.location.href = "http://127.0.0.1:8080/connexion.html";
+        //window.location.href = "https://kpop-nation-95ro.onrender.com/connexion.html";
+        window.location.href = "https://kpop-nation-95ro.onrender.com/index.html";
       }, 3000);
     } else {
       const errorData = await response1.json();
@@ -79,7 +80,8 @@ signIn.addEventListener("click", async function () {
       // Attendre 3 secondes (3000 millisecondes)
       setTimeout(function() {
       // Rediriger l'utilisateur vers une autre page après 3 secondes
-        window.location.href = "http://127.0.0.1:8080/connexion.html";
+        //window.location.href = "https://kpop-nation-95ro.onrender.com/connexion.html";
+        window.location.href = "https://kpop-nation-95ro.onrender.com/index.html";
       }, 3000);
     }
     console.log(response);
@@ -95,7 +97,8 @@ signIn.addEventListener("click", async function () {
     // Attendre 3 secondes (3000 millisecondes)
     setTimeout(function() {
     // Rediriger l'utilisateur vers une autre page après 3 secondes
-      window.location.href = "http://127.0.0.1:8080/connexion.html";
+      // window.location.href = "https://kpop-nation-95ro.onrender.com/connexion.html";
+      window.location.href = "https://kpop-nation-95ro.onrender.com/index.html";
     }, 3000);
   }
 });
@@ -117,10 +120,10 @@ login.addEventListener("click", async function () {
 
   try {
     // Effectuer une requête POST vers le backend
-    const response = await fetch('http://localhost:8000/user/login', {
+    const response = await fetch('http://kpopnation-backend.cluster-ig3.igpolytech.fr/user/login', {
       method: 'POST',
       headers: {
-        'Acces-Control-Allow-Origin': 'http://127.0.0.1:8080/', //autoriser le domaine d'origine
+        'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(user)
@@ -146,7 +149,7 @@ login.addEventListener("click", async function () {
       // Attendre 3 secondes (3000 millisecondes)
       setTimeout(function() {
       // Rediriger l'utilisateur vers une autre page après 3 secondes
-        window.location.href = "http://127.0.0.1:8080/index.html";
+        window.location.href = "https://kpop-nation-95ro.onrender.com/index.html";
       }, 3000);
       
     } else {
@@ -162,7 +165,8 @@ login.addEventListener("click", async function () {
       // Attendre 3 secondes (3000 millisecondes)
       setTimeout(function() {
       // Rediriger l'utilisateur vers une autre page après 3 secondes
-        window.location.href = "http://127.0.0.1:8080/connexion.html";
+        // window.location.href = "https://kpop-nation-95ro.onrender.com/connexion.html";
+        window.location.href = "https://kpop-nation-95ro.onrender.com/index.html";
       }, 3000);
     }
     console.log(response);
@@ -178,7 +182,8 @@ login.addEventListener("click", async function () {
     // Attendre 3 secondes (3000 millisecondes)
     setTimeout(function() {
     // Rediriger l'utilisateur vers une autre page après 3 secondes
-      window.location.href = "http://127.0.0.1:8080/connexion.html";
+      // window.location.href = "https://kpop-nation-95ro.onrender.com/connexion.html";
+      window.location.href = "https://kpop-nation-95ro.onrender.com/index.html";
     }, 3000);
   }
 });
@@ -205,7 +210,7 @@ login.addEventListener("click", async function () {
 
 //   try {
 //     // Effectuer une requête POST vers le backend
-//     const response1 = await fetch('http://localhost:8000/user/register', {
+//     const response1 = await fetch('http://kpopnation-backend.cluster-ig3.igpolytech.fr/user/register', {
 //       method: 'POST',
 //       headers: {
 //         'Acces-Control-Allow-Origin': 'http://127.0.0.1:8080/', //autoriser le domaine d'origine
@@ -220,7 +225,7 @@ login.addEventListener("click", async function () {
 //       // Utilisateur créé avec succès
 //       console.log('Utilisateur créé :', data);
 //       //On le connecte directement
-//       const response2 = await fetch('http://localhost:8000/user/login', {
+//       const response2 = await fetch('http://kpopnation-backend.cluster-ig3.igpolytech.fr/user/login', {
 //         method: 'POST',
 //         headers: {
 //           'Acces-Control-Allow-Origin': 'http://127.0.0.1:8080/', //autoriser le domaine d'origine
