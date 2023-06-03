@@ -1,5 +1,5 @@
 // Récupération des données de l'utilisateur 1
-const reponse1 = await fetch("http://kpopnation-backend.cluster-ig3.igpolytech.fr/user/2", {
+const reponse1 = await fetch("https://kpopnation-backend.cluster-ig3.igpolytech.fr/user/2", {
     headers: {
         'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
     }
@@ -50,7 +50,7 @@ deconnexion.addEventListener("click", function () {
 });
 
 // Récupération des commandes de l'utilisateur 2
-const reponse = await fetch("http://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/user/2", {
+const reponse = await fetch("https://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/user/2", {
     headers: {
         'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
     }
@@ -92,7 +92,7 @@ function afficherCommandes() {
         const date = document.createElement("td");
         const montant = document.createElement("td");
         //Trouver la date de la commande
-        const response1 = await fetch("http://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/date/"+idC, {
+        const response1 = await fetch("https://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/date/"+idC, {
             headers: {
                 'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
             }
@@ -120,7 +120,7 @@ async function montantTotal(idCommande) {
     articles = JSON.parse(articles);
 
         //Trouver les articles de la commande
-        const response2 = await fetch("http://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/articles/"+idCommande, {
+        const response2 = await fetch("https://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/articles/"+idCommande, {
             headers: {
                 'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
             }
@@ -129,7 +129,7 @@ async function montantTotal(idCommande) {
 
 // Récupérer les prix pour chaque article
 const fetchPrices = idArticles.map(async (idA) => {
-    const response3 = await fetch("http://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/montant/" + idCommande + "/" + idA.idArticle, {
+    const response3 = await fetch("https://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/montant/" + idCommande + "/" + idA.idArticle, {
       headers: {
         'Access-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
       }
@@ -388,7 +388,7 @@ function deleteArt() {
 
         try {
             // Effectuer une requête DELETE vers le backend
-            const response = await fetch('http://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/'+idCommande+'/'+idArticle, {
+            const response = await fetch('https://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/'+idCommande+'/'+idArticle, {
                 method: 'DELETE',
                 headers: {
                     'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
@@ -494,7 +494,7 @@ function updateArt() {
 
         try {
             // Effectuer une requête DELETE vers le backend
-            const response = await fetch('http://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/'+idCommande+'/'+idArticle, {
+            const response = await fetch('https://kpopnation-backend.cluster-ig3.igpolytech.fr/commande/'+idCommande+'/'+idArticle, {
                 method: 'PUT',
                 headers: {
                     'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine

@@ -41,7 +41,7 @@ signIn.addEventListener("click", async function () {
 
   try {
     // Effectuer une requête POST vers le backend
-    const response1 = await fetch('http://kpopnation-backend.cluster-ig3.igpolytech.fr/user/register', {
+    const response1 = await fetch('https://kpopnation-backend.cluster-ig3.igpolytech.fr/user/register', {
       method: 'POST',
       headers: {
         'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
@@ -120,7 +120,7 @@ login.addEventListener("click", async function () {
 
   try {
     // Effectuer une requête POST vers le backend
-    const response = await fetch('http://kpopnation-backend.cluster-ig3.igpolytech.fr/user/login', {
+    const response = await fetch('https://kpopnation-backend.cluster-ig3.igpolytech.fr/user/login', {
       method: 'POST',
       headers: {
         'Acces-Control-Allow-Origin': 'https://kpop-nation-95ro.onrender.com/', //autoriser le domaine d'origine
